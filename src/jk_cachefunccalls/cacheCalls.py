@@ -28,7 +28,8 @@ def cacheCalls(seconds:int = 0, dependArgs:typing.Union[typing.List,typing.Tuple
 	def _wrap_the_function(fn):
 		__CACHE[id(fn)] = [None, 0, None]		# lastArgID, lastT, lastResult
 
-		argNames = inspect.getargspec(fn).args
+		#argNames = inspect.getargspec(fn).args
+		argNames = inspect.getfullargspec(fn).args
 		bIsMethod = argNames and (argNames[0] == "self")
 		_nShift = 1 if bIsMethod else 0
 		#print("method" if bIsMethod else "function")
@@ -62,7 +63,7 @@ def cacheCalls(seconds:int = 0, dependArgs:typing.Union[typing.List,typing.Tuple
 				cacheRecord[1] = tNow
 				cacheRecord[2] = fn(*args, **kwargs)
 
-			return cacheRecord[1]
+			return cacheRecord[2]
 		#
 
 		return wrapped

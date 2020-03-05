@@ -23,7 +23,7 @@ setup(
 		"License :: OSI Approved :: Apache Software License",
 	],
 	description = "This python module provides an annotation that caches results of function calls automatically.",
-	download_url = "https://github.com/jkpubsrc/python-module-jk-cachefunccalls/tarball/0.2020.3.5",
+	download_url = "https://github.com/jkpubsrc/python-module-jk-cachefunccalls/tarball/0.2020.3.5.1",
 	include_package_data = False,
 	install_requires = [
 	],
@@ -36,7 +36,7 @@ setup(
 		"jk_cachefunccalls",
 	],
 	url = "https://github.com/jkpubsrc/python-module-jk-cachefunccalls",
-	version = "0.2020.3.5",
+	version = "0.2020.3.5.1",
 	zip_safe = False,
 	long_description = readme(),
 	long_description_content_type="text/markdown",
