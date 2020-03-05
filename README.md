@@ -92,11 +92,13 @@ In this implementation we give speed of caching a greater emphasis than the exac
 
 ### Explicit Calls Ignoring the a Cached Value
 
-Sometimes it is required to ignore a value possibly cached. For this use the `_ignoreCache` argument if you invoke such an annotated function:
+Sometimes it is required to ignore a value that might have been cached. For this use the `_ignoreCache` argument if you invoke such an annotated function:
 
 ```python
 x = someFunction("localhost", _ignoreCache=True)
 ```
+
+If you specify `_ignoreCache` this will control the behaviour of the wrapper around the function to be invoked. If you specify `True` here the wrapper will ignore the cache (but will cache the new value returned by the invoked function).
 
 
 Contact Information
