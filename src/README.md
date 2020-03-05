@@ -31,7 +31,7 @@ Please include this module into your application using the following code:
 from jk_cachefunccalls import *
 ```
 
-### Annotate a Function
+### Annotate a function
 
 Now after having imported the annotation named `cacheCalls` we can make use of it. Example:
 
@@ -46,7 +46,7 @@ def someFunction():
 
 In the example above the function `someFunction` is annotated in such a way that return values are cached for 5 seconds.
 
-### Annotate a Method
+### Annotate a method
 
 With annotating methods it is exactly the same:
 
@@ -65,7 +65,7 @@ class MyClass(object):
 	...
 ```
 
-### Caching Depending on an Argument
+### Caching depending on an argument
 
 Sometimes you need to depend function or method calls on argument(s). If arguments exists, the caching mechanism can take them into consideration. For that you can specify an additional annotation parameter that defines the *index* of the argument(s) to consider. Example:
 
@@ -90,7 +90,7 @@ The reason for this is simple: E.g. if you would like to depend some function ca
 
 In this implementation we give speed of caching a greater emphasis than the exact state of an argument object. It is your responsibility as a programmer to know about the consequences of such caching (and the implications using the ids of arguments) in order to have your program behave correctly.
 
-### Explicit Calls Ignoring the a Cached Value
+### Ignoring the cache
 
 Sometimes it is required to ignore a value that might have been cached. For this use the `_ignoreCache` argument if you invoke such an annotated function:
 
@@ -101,7 +101,7 @@ x = someFunction("localhost", _ignoreCache=True)
 If you specify `_ignoreCache` this will control the behaviour of the wrapper around the function to be invoked. If you specify `True` here the wrapper will ignore the cache (but will cache the new value returned by the invoked function).
 
 
-Contact Information
+Contact information
 -------------------
 
 This work is Open Source. This enables you to use this work for free.
