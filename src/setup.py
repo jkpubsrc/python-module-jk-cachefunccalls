@@ -19,24 +19,23 @@ setup(
 	author = "Jürgen Knauth",
 	author_email = "pubsrc@binary-overflow.de",
 	classifiers = [
-		"Development Status :: 3 - Alpha",
+		"Development Status :: 4 - Beta",
 		"License :: OSI Approved :: Apache Software License",
+		"Programming Language :: Python :: 3",
 	],
 	description = "This python module provides an annotation that caches results of function calls automatically.",
-	download_url = "https://github.com/jkpubsrc/python-module-jk-cachefunccalls/tarball/0.2020.3.5.1",
 	include_package_data = False,
 	install_requires = [
 	],
 	keywords = [
 		"caching",
 	],
-	license = "Apache 2.0",
+	license = "Apache2",
 	name = "jk_cachefunccalls",
 	packages = [
 		"jk_cachefunccalls",
 	],
-	url = "https://github.com/jkpubsrc/python-module-jk-cachefunccalls",
-	version = "0.2020.3.5.1",
+	version = "0.2020.12.7",
 	zip_safe = False,
 	long_description = readme(),
 	long_description_content_type="text/markdown",

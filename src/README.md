@@ -1,4 +1,4 @@
-﻿jk_cachefunccalls
+jk_cachefunccalls
 ==========
 
 Introduction

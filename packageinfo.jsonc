@@ -1,0 +1,50 @@
+{
+	"documentation": [],
+	"magic": {
+		"magic": "packageinfo",
+		"version": 2
+	},
+	"meta": {
+		"authors": [
+			{
+				"email": "pubsrc@binary-overflow.de",
+				"name": "J\u00fcrgen Knauth"
+			}
+		],
+		"description": "This python module provides an annotation that caches results of function calls automatically.",
+		"development_status": "beta",
+		"keywords": [
+			"caching"
+		],
+		"language": "python3",
+		"license": "Apache2",
+		"name": "jk_cachefunccalls",
+		"packageClass": "python-module",
+		"version": "0.2020.12.7"
+	},
+	"repositories": [
+		{
+			"devon_publish": true,
+			"project": "python-module-jk-cachefunccalls",
+			"type": "github",
+			"user": "jkpubsrc"
+		},
+		{
+			"devon_publish": true,
+			"project": "jk_cachefunccalls",
+			"type": "pypy"
+		}
+	],
+	"requirements": {
+		"python_packages": [],
+		"python_packages_dev": [],
+		"system_apt_packages": []
+	},
+	"source": {
+		"extra_binary_files": [],
+		"extra_data_files": [],
+		"packages": [
+			"jk_cachefunccalls"
+		]
+	}
+}

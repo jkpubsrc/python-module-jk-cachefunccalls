@@ -42,7 +42,8 @@ def cacheCalls(seconds:int = 0, dependArgs:typing.Union[typing.List,typing.Tuple
 			tNow = time.time()
 			extraIdentifier = ""
 			for i in nIdentifierArgs:
-				extraIdentifier += "|" + str(id(args[i]))
+				if i < len(args):
+					extraIdentifier += "|" + str(id(args[i]))
 
 			bNeedsInvoke = False
 			if "_ignoreCache" in kwargs:
