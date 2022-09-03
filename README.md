@@ -8,7 +8,7 @@ This python module provides an annotation that caches results of function calls 
 
 Information about this module can be found here:
 
-* [github.org](https://github.com/jkpubsrc/python-module-jk_cachefunccalls)
+* [github.com](https://github.com/jkpubsrc/python-module-jk-cachefunccalls)
 * [pypi.python.org](https://pypi.python.org/pypi/jk_cachefunccalls)
 
 Why this module?
