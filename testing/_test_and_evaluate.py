@@ -14,7 +14,7 @@ import jk_cachefunccalls
 
 def _testStd(someCallable) -> list:
 
-	print("Testing ... please wait ...")
+	print("Testing 20 calls spanning over 10 seconds ... please wait ...")
 	print()
 
 	results = []
@@ -66,7 +66,7 @@ def _testInv(someCallable) -> list:
 
 def _evaluateStd(results:list):
 
-	print("Evaluating: There should be sets of three or four time values that are identical ...")
+	print("Evaluating: There should be sets of four or five sets of values that are identical ...")
 
 	c = collections.Counter()
 	for n in results:
@@ -112,11 +112,11 @@ def _evaluateInv(results:list):
 
 
 
-def testAndEvaluate(someCallable, invalidate:bool = False):
+def testAndEvaluate(someCallable, invalid:bool = False):
 	assert callable(someCallable)
-	assert isinstance(invalidate, bool)
+	assert isinstance(invalid, bool)
 
-	if invalidate:
+	if invalid:
 		results = _testInv(someCallable)
 		_evaluateInv(results)
 	else:

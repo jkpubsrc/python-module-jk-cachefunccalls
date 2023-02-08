@@ -24,7 +24,7 @@ setup(
 		"Programming Language :: Python :: 3",
 	],
 	description = "This python module provides an annotation that caches results of function calls automatically.",
-	include_package_data = False,
+	include_package_data = True,
 	install_requires = [
 	],
 	keywords = [
@@ -32,11 +32,17 @@ setup(
 	],
 	license = "Apache2",
 	name = "jk_cachefunccalls",
+	package_data = {
+		"": [
+		],
+	},
 	packages = [
 		"jk_cachefunccalls",
 	],
-	version = "0.2020.12.7",
+	scripts = [
+	],
+	version = '0.2023.2.8',
 	zip_safe = False,
 	long_description = readme(),
-	long_description_content_type="text/markdown",
+	long_description_content_type = "text/markdown",
 )

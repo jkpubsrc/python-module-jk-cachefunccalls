@@ -25,7 +25,7 @@ def returnSomething(n):
 
 
 
-testAndEvaluate(returnSomething, invalidate=True)
+testAndEvaluate(returnSomething, invalid=True)
 
 
 

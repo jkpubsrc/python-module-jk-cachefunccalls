@@ -28,7 +28,7 @@ How to use this module
 Please include this module into your application using the following code:
 
 ```python
-from jk_cachefunccalls import *
+import jk_cachefunccalls
 ```
 
 ### Annotate a function
@@ -36,7 +36,7 @@ from jk_cachefunccalls import *
 Now after having imported the annotation named `cacheCalls` we can make use of it. Example:
 
 ```python
-@cacheCalls(seconds=5)
+@jk_cachefunccalls.cacheCalls(seconds=5)
 def someFunction():
 	....
 	# do something complicated
@@ -55,7 +55,7 @@ class MyClass(object):
 
 	...
 
-	@cacheCalls(seconds=5)
+	@jk_cachefunccalls.cacheCalls(seconds=5)
 	def someMethod(self):
 		....
 		# do something complicated
@@ -65,12 +65,14 @@ class MyClass(object):
 	...
 ```
 
+This works for static methods as well.
+
 ### Caching depending on an argument
 
 Sometimes you need to depend function or method calls on argument(s). If arguments exists, the caching mechanism can take them into consideration. For that you can specify an additional annotation parameter that defines the *index* of the argument(s) to consider. Example:
 
 ```python
-@cacheCalls(seconds=5, dependArgs=[0])
+@jk_cachefunccalls.cacheCalls(seconds=5, dependArgs=[0])
 def someFunction(hostName:str):
 	....
 	# do something complicated
@@ -100,6 +102,13 @@ x = someFunction("localhost", _ignoreCache=True)
 
 If you specify `_ignoreCache` this will control the behaviour of the wrapper around the function to be invoked. If you specify `True` here the wrapper will ignore the cache (but will cache the new value returned by the invoked function).
 
+### Clear the cache
+
+To clear the cache invoke the following function:
+
+```python
+jk_cachefunccalls.clearCache()
+```
 
 Contact information
 -------------------

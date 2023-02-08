@@ -12,6 +12,22 @@ import typing
 __CACHE = {}
 
 
+
+
+
+
+#
+# Clear the cache
+#
+def clearCache():
+	__CACHE.clear()
+#
+
+
+
+
+
+
 # this is the annotation wrapper that receives arguments and returns the function that does the wrapping
 def cacheCalls(seconds:int = 0, dependArgs:typing.Union[typing.List,typing.Tuple] = None):
 	assert isinstance(seconds, int)
@@ -37,7 +53,11 @@ def cacheCalls(seconds:int = 0, dependArgs:typing.Union[typing.List,typing.Tuple
 
 		# this function is executed every time the wrapped function is invoked.
 		def wrapped(*args, **kwargs):
-			cacheRecord = __CACHE[id(fn)]
+			cacheRecord = __CACHE.get(id(fn))		# the cache record might have been deleted by clearCache()
+			if cacheRecord is None:
+				# create a new empty entry
+				cacheRecord = [None, 0, None]
+				__CACHE[id(fn)] = cacheRecord
 
 			tNow = time.time()
 			extraIdentifier = ""
